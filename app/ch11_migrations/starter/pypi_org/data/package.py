@@ -12,6 +12,8 @@ class Package(SqlAlchemyBase):
 
     id: str = sa.Column(sa.String, primary_key=True)
     created_date: datetime.datetime = sa.Column(sa.DateTime, default=datetime.datetime.now, index=True)
+    updated_date: datetime.datetime = sa.Column(sa.DateTime, default=datetime.datetime.now, index=True)
+
     summary: str = sa.Column(sa.String, nullable=False)
     description: str = sa.Column(sa.String, nullable=True)
 
